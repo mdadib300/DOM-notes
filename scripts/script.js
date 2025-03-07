@@ -17,3 +17,13 @@ document.getElementById('cse').style.color='crimson';
 console.log(document.getElementById('cse').getAttribute('class'))
 
 // Google a similar method like it, which is ClassList
+
+// Set attribute
+document.getElementById('kors').setAttribute("class", "colorBlue");
+
+// Inner text
+console.log(document.getElementById('h4').innerText)
+
+// Inner HTML
+document.getElementById('h4').innerHTML = `<h1>this is an changed text</h1>
+                                            <h2> this is the proof</h2>`;
