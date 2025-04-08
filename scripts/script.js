@@ -27,3 +27,26 @@ console.log(document.getElementById('h4').innerText)
 // Inner HTML
 document.getElementById('h4').innerHTML = `<h1>this is an changed text</h1>
                                             <h2> this is the proof</h2>`;
+// Add Event Listener
+const button = document.getElementById('btn');
+const buttonText = document.getElementById('btn-p');
+button.addEventListener("click", function(){
+    alert("Button clicked!");
+    buttonText.innerText = "You clicked the button";
+    buttonText.style.color = "blue";
+});   
+
+
+/*
+
+Imagine you click on a <button> inside a <div>.
+JavaScript doesn't just say "cool, the button was clicked" — it bubbles that event up the DOM tree:
+
+🔁 Event Flow:
+1. Event happens on the button
+2. Then it bubbles up to the parent div
+3. Then to body, then to html, and so on...
+
+[Search for it, event.stopPropagation();]
+
+*/
